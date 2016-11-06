@@ -77,6 +77,7 @@ class App extends Component {
               <th>Mengde i gram</th>
               <th>Pris</th>
               <th>Butikk</th>
+              <th>Pris per kg</th>
             </tr>
           { this.renderItems() }
           </tbody>
