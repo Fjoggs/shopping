@@ -44,7 +44,7 @@ class App extends Component {
           <h1>Shopping</h1>
         </header>
 
-        <form className="new-item" onSubmit={ this.handleSubmit.bind(this) }>
+        <form onSubmit={ this.handleSubmit.bind(this) }>
           <input
             type="text"
             ref="nameInput"
@@ -78,6 +78,8 @@ class App extends Component {
               <th>Pris</th>
               <th>Butikk</th>
               <th>Pris per kg</th>
+              <th>Check</th>
+              <th>Fjern fra listen</th>
             </tr>
           { this.renderItems() }
           </tbody>
