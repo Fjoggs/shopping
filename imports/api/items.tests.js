@@ -14,6 +14,7 @@ if (Meteor.isServer) {
       let itemId, invocation;
 
       beforeEach( () => {
+        // todo: fix stubbing
         invocation = { userId };
         StubCollections.stub(Items);
         itemId = Items.insert( {
