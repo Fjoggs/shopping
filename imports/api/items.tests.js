@@ -32,6 +32,15 @@ if (Meteor.isServer) {
 
         assert.equal(Items.find().count(), 0);
       });
+
+      it('can check owned item', () => {
+        const checkItem = Meteor.server.method_handlers['items.setChecked'];
+        const invocation = { userId };
+
+        checkItem.apply(invocation, [itemId]);
+
+        assert.equal(Items.find().count(), 1);
+      });
     });
   });
 }
