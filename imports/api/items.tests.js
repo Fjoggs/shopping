@@ -16,7 +16,6 @@ if (Meteor.isServer) {
       beforeEach( () => {
         invocation = { userId };
         StubCollections.stub(Items);
-        Items.remove({});
         itemId = Items.insert( {
           name: 'Test name',
           amount: '100',
