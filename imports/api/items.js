@@ -23,8 +23,7 @@ Meteor.methods({
     check(store, String);
 
     if(!this.userId) {
-      debugger;
-      throw new Meteor.error('not-authorized');
+      throw new Meteor.Error('not-authorized');
     }
 
     Items.insert({
@@ -63,7 +62,7 @@ Meteor.methods({
     const item = Items.findOne(itemId);
 
     if(item.owner !== this.userId) {
-      throw new Meteor.error('not-authorized');
+      throw new Meteor.Error('not-authorized');
     }
 
     Items.update(itemId, { $set: { private: setToPrivate } });
