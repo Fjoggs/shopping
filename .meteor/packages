@@ -22,4 +22,5 @@ react-meteor-data
 accounts-ui
 accounts-password
 practicalmeteor:mocha
-hwillson:stub-collections
+practicalmeteor:sinon
+xolvio:cleaner
