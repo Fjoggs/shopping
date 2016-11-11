@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 
-import { Items } from '../api/items.js';
+import { Items } from '../../api/items.js';
 
 import Item from './Item.jsx'; // eslint-disable-line no-unused-vars
 import Prices from './Prices.jsx'; // eslint-disable-line no-unused-vars
@@ -73,6 +73,32 @@ class App extends Component {
 						/>
 					Skjul huket av varer
 				</label>
+
+				{ this.props.currentUser ?
+					<form onSubmit={ this.handleSubmit.bind(this) }>
+						<input
+							type="text"
+							ref="nameInput"
+							placeholder="Navn på vare"
+							/>
+						<input
+							type="number"
+							ref="amountInput"
+							placeholder="Mengde i gram"
+							/>
+						<input
+							type="number"
+							ref="priceInput"
+							placeholder="Pris"
+							/>
+						<input
+							type="text"
+							ref="storeInput"
+							placeholder="Butikk"
+							/>
+						<input type="submit" value="Submit!" />
+					</form> : ''
+				}
 
 				<AccountsUIWrapper />
 
