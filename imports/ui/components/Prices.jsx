@@ -4,7 +4,7 @@ export default class Prices extends Component {
 	render() {
 		return (
 			<div>
-				Please?
+				Bitch please!
 			</div>
 		);
 	}
