@@ -3,8 +3,7 @@ dependencies:
     - ~/.meteor
   override:
     - curl https://install.meteor.com | /bin/sh
-    - npm install
-    - meteor npm rebuild
+    - meteor npm install
 
 test:
   override:
