@@ -3,11 +3,14 @@ dependencies:
     - ~/.meteor
   override:
     - meteor || curl https://install.meteor.com | /bin/sh
-    - npm install
+    - meteor remove dispatch:mocha-phantomjs
+    - meteor add dispatch:mocha-phantomjs
 
 test:
   override:
     - meteor npm test
+        environment:
+            MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
 
 checkout:
   post:
