@@ -5,6 +5,10 @@ dependencies:
     - meteor || curl https://install.meteor.com | /bin/sh
     - npm install
 
+test:
+  override:
+    - meteor npm test
+
 checkout:
   post:
     - git submodule update --init
