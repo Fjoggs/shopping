@@ -23,4 +23,5 @@ accounts-password@1.3.3
 practicalmeteor:mocha
 practicalmeteor:sinon
 xolvio:cleaner
+practicalmeteor:mocha-console-runner
 dispatch:mocha-phantomjs
